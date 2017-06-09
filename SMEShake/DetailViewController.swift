@@ -12,7 +12,10 @@ class DetailViewController: UIViewController {
 
     @IBOutlet var lblBubble: UILabel!
     @IBOutlet var imgEmoji: UIImageView!
+    @IBOutlet var slidingTexts: SlidingText!
+    @IBOutlet var bubbleContainer: UIView!
     
+    var currentMode : Int = 1 //Show must go on Mode on
     var speeches = Dictionary<String,String>()
     var emojis = Dictionary<String,String>()
     override var canBecomeFirstResponder: Bool { return true}
@@ -23,7 +26,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         guard let theSpeeches =  self.readJson(fileName: "speech") else {
             self.navigationController?.popViewController(animated: true)
             return
@@ -41,7 +44,50 @@ class DetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let text = self.slidingTexts
+        text?.pause()
+        self.slidingTexts.alpha = 0.0
+    }
+    
+    /*
+     0 - Editing
+     1 - Show Must go on
+     */
+    func changeMode(to:Int){
+        
+        self.currentMode = to
+        
+        if to == 0 {
+            
+            UIView.animate(withDuration: 0.7, animations: {
+                self.imgEmoji.alpha = 0.0
+                self.bubbleContainer.alpha = 0.0
+                self.slidingTexts.alpha = 1.0
+                self.slidingTexts.start()
+            })
+            
+            
+        }else{
+            
+            UIView.animate(withDuration: 0.7, animations: {
+                self.imgEmoji.alpha = 1.0
+                self.bubbleContainer.alpha = 1.0
+                self.slidingTexts.alpha = 0.0
+                self.slidingTexts.pause()
+            })
+            
+        }
+        
+    }
 
+    @IBAction func infoTapped(_ sender: UIButton) {
+        let nextMode = 1 - self.currentMode
+        self.changeMode(to: nextMode)
+    }
+    
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         
         guard let motionEvent = event else { return }
@@ -74,6 +120,8 @@ class DetailViewController: UIViewController {
         }
         
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

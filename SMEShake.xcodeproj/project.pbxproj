@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33D78C49D47A0DC576CDD44D /* Pods_SMEShake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4161BDA7B9328168CE4C7F3 /* Pods_SMEShake.framework */; };
+		DF1682241EEB0D5900430D29 /* SlidingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1682231EEB0D5900430D29 /* SlidingText.swift */; };
 		DFF5CA8A1EEAEA43004F559C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5CA891EEAEA43004F559C /* AppDelegate.swift */; };
 		DFF5CA8C1EEAEA43004F559C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5CA8B1EEAEA43004F559C /* MasterViewController.swift */; };
 		DFF5CA911EEAEA43004F559C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF5CA8F1EEAEA43004F559C /* Main.storyboard */; };
@@ -18,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B849D78C1EB0DD8C83B7C40 /* Pods-SMEShake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMEShake.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMEShake/Pods-SMEShake.release.xcconfig"; sourceTree = "<group>"; };
+		94EEB7B36B612FDE165CB19A /* Pods-SMEShake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMEShake.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMEShake/Pods-SMEShake.debug.xcconfig"; sourceTree = "<group>"; };
+		B4161BDA7B9328168CE4C7F3 /* Pods_SMEShake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMEShake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1682231EEB0D5900430D29 /* SlidingText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingText.swift; sourceTree = "<group>"; };
 		DFF5CA861EEAEA43004F559C /* SMEShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMEShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF5CA891EEAEA43004F559C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF5CA8B1EEAEA43004F559C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -35,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D78C49D47A0DC576CDD44D /* Pods_SMEShake.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98D9A2432E74C136BEBC2785 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94EEB7B36B612FDE165CB19A /* Pods-SMEShake.debug.xcconfig */,
+				4B849D78C1EB0DD8C83B7C40 /* Pods-SMEShake.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DFF5CA7D1EEAEA43004F559C = {
 			isa = PBXGroup;
 			children = (
 				DFF5CA881EEAEA43004F559C /* SMEShake */,
 				DFF5CA871EEAEA43004F559C /* Products */,
+				98D9A2432E74C136BEBC2785 /* Pods */,
+				E1CA3B85EF1415F63A4996EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +78,7 @@
 		DFF5CA881EEAEA43004F559C /* SMEShake */ = {
 			isa = PBXGroup;
 			children = (
+				DF1682231EEB0D5900430D29 /* SlidingText.swift */,
 				DFF5CA891EEAEA43004F559C /* AppDelegate.swift */,
 				DFF5CA8B1EEAEA43004F559C /* MasterViewController.swift */,
 				DFF5CA8F1EEAEA43004F559C /* Main.storyboard */,
@@ -73,6 +92,14 @@
 			path = SMEShake;
 			sourceTree = "<group>";
 		};
+		E1CA3B85EF1415F63A4996EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4161BDA7B9328168CE4C7F3 /* Pods_SMEShake.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFF5CA9A1EEAEA43004F559C /* Build configuration list for PBXNativeTarget "SMEShake" */;
 			buildPhases = (
+				A6A8AD8FD9464F0B19E648C8 /* [CP] Check Pods Manifest.lock */,
 				DFF5CA821EEAEA43004F559C /* Sources */,
 				DFF5CA831EEAEA43004F559C /* Frameworks */,
 				DFF5CA841EEAEA43004F559C /* Resources */,
+				BF567F1F5AF54308AAD1746A /* [CP] Embed Pods Frameworks */,
+				65BB88E83751F2F667E75AF5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +173,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65BB88E83751F2F667E75AF5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMEShake/Pods-SMEShake-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6A8AD8FD9464F0B19E648C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF567F1F5AF54308AAD1746A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMEShake/Pods-SMEShake-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DFF5CA821EEAEA43004F559C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,6 +229,7 @@
 				DFF5CA9E1EEAF192004F559C /* DetailViewController.swift in Sources */,
 				DFF5CA8C1EEAEA43004F559C /* MasterViewController.swift in Sources */,
 				DFF5CA8A1EEAEA43004F559C /* AppDelegate.swift in Sources */,
+				DF1682241EEB0D5900430D29 /* SlidingText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +350,7 @@
 		};
 		DFF5CA9B1EEAEA43004F559C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94EEB7B36B612FDE165CB19A /* Pods-SMEShake.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2GKG6WK3GH;
@@ -285,6 +365,7 @@
 		};
 		DFF5CA9C1EEAEA43004F559C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B849D78C1EB0DD8C83B7C40 /* Pods-SMEShake.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2GKG6WK3GH;
@@ -316,6 +397,7 @@
 				DFF5CA9C1EEAEA43004F559C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

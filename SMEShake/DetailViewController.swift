@@ -14,7 +14,9 @@ class DetailViewController: UIViewController {
     @IBOutlet var imgEmoji: UIImageView!
     @IBOutlet var slidingTexts: SlidingText!
     @IBOutlet var bubbleContainer: UIView!
+    @IBOutlet var portraits: [UIImageView]!
     
+    var tapGesture : UITapGestureRecognizer? = nil
     var currentMode : Int = 1 //Show must go on Mode on
     var speeches = Dictionary<String,String>()
     var emojis = Dictionary<String,String>()
@@ -62,11 +64,21 @@ class DetailViewController: UIViewController {
         
         if to == 0 {
             
+            if self.tapGesture == nil{
+                let tapGestureRecognizer = UITapGestureRecognizer.init(target: self, action:#selector(DetailViewController.tapImage(_:)))
+                self.tapGesture = tapGestureRecognizer
+                self.view.addGestureRecognizer(tapGestureRecognizer)
+            }
+            
             UIView.animate(withDuration: 0.7, animations: {
                 self.imgEmoji.alpha = 0.0
                 self.bubbleContainer.alpha = 0.0
                 self.slidingTexts.alpha = 1.0
                 self.slidingTexts.start()
+                
+                for portrait in self.portraits{
+                    portrait.alpha = 1.0
+                }
             })
             
             
@@ -77,12 +89,24 @@ class DetailViewController: UIViewController {
                 self.bubbleContainer.alpha = 1.0
                 self.slidingTexts.alpha = 0.0
                 self.slidingTexts.pause()
+                
+                for portrait in self.portraits{
+                    portrait.alpha = 0.0
+                }
             })
             
         }
         
     }
 
+    func tapImage(_ recognizer: UITapGestureRecognizer){
+     
+        if self.currentMode == 0{
+            self.changeMode(to: 1 - self.currentMode)
+        }
+        
+    }
+    
     @IBAction func infoTapped(_ sender: UIButton) {
         let nextMode = 1 - self.currentMode
         self.changeMode(to: nextMode)
@@ -100,6 +124,9 @@ class DetailViewController: UIViewController {
     }
     
     func shake(numberOfItems: Int){
+        
+        if self.currentMode == 0 { return }
+        
         let randomNumber = String(Int(arc4random_uniform(UInt32(numberOfItems))) + 1)
         let speech = self.speeches[randomNumber] ?? ""
         let emojiName  = self.emojis[randomNumber] ?? "0"

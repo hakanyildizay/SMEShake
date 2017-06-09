@@ -10,17 +10,86 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet var lblBubble: UILabel!
+    @IBOutlet var imgEmoji: UIImageView!
+    
+    var speeches = Dictionary<String,String>()
+    var emojis = Dictionary<String,String>()
+    override var canBecomeFirstResponder: Bool { return true}
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let theSpeeches =  self.readJson(fileName: "speech") else {
+            self.navigationController?.popViewController(animated: true)
+            return
+        }
+        
+        guard let theEmojis = self.readJson(fileName: "emoji") else {
+            self.navigationController?.popViewController(animated: true)
+            return
+        }
+        
+        self.speeches = theSpeeches
+        self.emojis =  theEmojis
+        let numberOfItems =  min(theSpeeches.count, theEmojis.count)
+        self.shake(numberOfItems: numberOfItems)
+        
         // Do any additional setup after loading the view.
     }
 
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        
+        guard let motionEvent = event else { return }
+        
+        if motionEvent.type == .motion {
+            let numberOfItems =  min(self.speeches.count, self.emojis.count)
+            self.shake(numberOfItems: numberOfItems)
+        }
+        
+    }
+    
+    func shake(numberOfItems: Int){
+        let randomNumber = String(Int(arc4random_uniform(UInt32(numberOfItems))) + 1)
+        let speech = self.speeches[randomNumber] ?? ""
+        let emojiName  = self.emojis[randomNumber] ?? "0"
+        self.imgEmoji.image = UIImage(named: emojiName)
+        self.lblBubble.text = speech
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    private func readJson(fileName:String) -> Dictionary<String,String>? {
+        do {
+            if let file = Bundle.main.url(forResource: fileName, withExtension: "json") {
+                let data = try Data(contentsOf: file)
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let object = json as? [String: String] {
+                    // json is a dictionary
+                    return object
+                } else if let object = json as? [Any] {
+                    // json is an array
+                    return nil
+                } else {
+                    print("JSON is invalid")
+                    return nil
+                }
+            } else {
+                print("no file")
+                return nil
+            }
+        } catch {
+            print(error.localizedDescription)
+            return nil
+        }
+    }
 
     /*
     // MARK: - Navigation

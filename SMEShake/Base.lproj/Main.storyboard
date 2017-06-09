@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RMx-3f-FxP">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,31 +36,31 @@
                         <viewControllerLayoutGuide type="bottom" id="Odj-cd-Ccu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dti-fo-nK1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ing_logo" translatesAutoresizingMaskIntoConstraints="NO" id="K4N-AM-wmr">
-                                <rect key="frame" x="232" y="587" width="127" height="60"/>
+                                <rect key="frame" x="267" y="656" width="127" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0Je-2f-VSx"/>
                                     <constraint firstAttribute="width" constant="127" id="FDK-I5-TRw"/>
                                 </constraints>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="shake_logo" translatesAutoresizingMaskIntoConstraints="NO" id="eRI-g5-p97">
-                                <rect key="frame" x="146" y="454" width="83" height="83"/>
+                                <rect key="frame" x="165.66666666666666" y="523" width="83" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="Gnc-R2-Ojg"/>
                                     <constraint firstAttribute="height" constant="83" id="wpe-Va-Grt"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SME SHAKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wgy-fb-gI9">
-                                <rect key="frame" x="0.0" y="100" width="375" height="72.5"/>
+                                <rect key="frame" x="0.0" y="99.999999999999986" width="414" height="72.666666666666643"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="62"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="foto_edit" translatesAutoresizingMaskIntoConstraints="NO" id="FZf-EQ-9GG">
-                                <rect key="frame" x="0.0" y="147" width="375" height="374"/>
+                                <rect key="frame" x="0.0" y="181" width="414" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="374" id="Qyj-0E-p60"/>
                                 </constraints>
@@ -82,33 +83,98 @@
                     </view>
                     <navigationItem key="navigationItem" id="4wP-2D-ycv"/>
                     <connections>
-                        <segue destination="cIy-nE-73l" kind="show" identifier="toDetail" id="5K0-aw-mz9"/>
+                        <segue destination="mM0-FX-q6e" kind="show" identifier="toDetail" id="LaS-TG-59V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aH8-2c-1yQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="-630"/>
+            <point key="canvasLocation" x="897" y="-630"/>
         </scene>
         <!--Detail View Controller-->
-        <scene sceneID="GFO-nm-2vw">
+        <scene sceneID="zTJ-bg-irf">
             <objects>
-                <viewController id="cIy-nE-73l" customClass="DetailViewController" customModule="SMEShake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mM0-FX-q6e" customClass="DetailViewController" customModule="SMEShake" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zMh-ad-wGx"/>
-                        <viewControllerLayoutGuide type="bottom" id="J22-7P-QHD"/>
+                        <viewControllerLayoutGuide type="top" id="WId-Kt-Qbb"/>
+                        <viewControllerLayoutGuide type="bottom" id="aB3-A2-JrH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UUC-0X-fN9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="2X5-Pp-VOK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ing_logo" translatesAutoresizingMaskIntoConstraints="NO" id="1qq-tS-C1a">
+                                <rect key="frame" x="267" y="656" width="127" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="7SI-6V-L3s"/>
+                                    <constraint firstAttribute="height" constant="60" id="Zo1-7S-UaU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="foto_edit" translatesAutoresizingMaskIntoConstraints="NO" id="Y5P-pE-xgp">
+                                <rect key="frame" x="0.0" y="181" width="414" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="374" id="XgH-pt-ZUc"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ho-5P-So6">
+                                <rect key="frame" x="82" y="132" width="250" height="196"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="chatBubble" translatesAutoresizingMaskIntoConstraints="NO" id="YGQ-Pe-J2a">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="196"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="buradaki analiz ile daha önce gelen aynı değil. Bu tanımlara bir bakar mısınız?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6c-WW-F3W">
+                                        <rect key="frame" x="19" y="16" width="207" height="118"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="9Ul-sh-ady"/>
+                                    <constraint firstAttribute="trailing" secondItem="W6c-WW-F3W" secondAttribute="trailing" constant="24" id="JwX-vr-BBL"/>
+                                    <constraint firstAttribute="bottom" secondItem="W6c-WW-F3W" secondAttribute="bottom" constant="62" id="NFw-Zh-tIM"/>
+                                    <constraint firstAttribute="height" constant="196" id="exv-z9-j0c"/>
+                                    <constraint firstItem="W6c-WW-F3W" firstAttribute="leading" secondItem="5Ho-5P-So6" secondAttribute="leading" constant="19" id="sOf-q9-SjV"/>
+                                    <constraint firstItem="W6c-WW-F3W" firstAttribute="top" secondItem="5Ho-5P-So6" secondAttribute="top" constant="16" id="wXV-Hv-oE0"/>
+                                </constraints>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="9" translatesAutoresizingMaskIntoConstraints="NO" id="RJa-RD-f6G">
+                                <rect key="frame" x="157" y="511" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8vd-Pg-6gy"/>
+                                    <constraint firstAttribute="height" constant="100" id="Vp3-HJ-o7w"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.4549019608" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aB3-A2-JrH" firstAttribute="top" secondItem="1qq-tS-C1a" secondAttribute="bottom" constant="20" id="APs-iO-9ao"/>
+                            <constraint firstAttribute="trailing" secondItem="Y5P-pE-xgp" secondAttribute="trailing" id="CgO-j8-crl"/>
+                            <constraint firstItem="Y5P-pE-xgp" firstAttribute="centerY" secondItem="5Ho-5P-So6" secondAttribute="bottom" constant="40" id="Ozg-Ke-j1F"/>
+                            <constraint firstItem="Y5P-pE-xgp" firstAttribute="centerY" secondItem="2X5-Pp-VOK" secondAttribute="centerY" id="RcM-yx-mBI"/>
+                            <constraint firstItem="RJa-RD-f6G" firstAttribute="centerX" secondItem="2X5-Pp-VOK" secondAttribute="centerX" id="XuW-Sx-4Qg"/>
+                            <constraint firstItem="5Ho-5P-So6" firstAttribute="centerX" secondItem="Y5P-pE-xgp" secondAttribute="centerX" id="al0-Th-4ra"/>
+                            <constraint firstItem="1qq-tS-C1a" firstAttribute="trailing" secondItem="2X5-Pp-VOK" secondAttribute="trailingMargin" id="dq8-uh-q0O"/>
+                            <constraint firstItem="Y5P-pE-xgp" firstAttribute="centerX" secondItem="2X5-Pp-VOK" secondAttribute="centerX" id="ny7-dC-77J"/>
+                            <constraint firstItem="1qq-tS-C1a" firstAttribute="top" secondItem="RJa-RD-f6G" secondAttribute="bottom" constant="45" id="rQW-HJ-jEQ"/>
+                            <constraint firstItem="Y5P-pE-xgp" firstAttribute="leading" secondItem="2X5-Pp-VOK" secondAttribute="leading" id="vni-gp-6XD"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wJA-Zg-4ng"/>
+                    <connections>
+                        <outlet property="imgEmoji" destination="RJa-RD-f6G" id="W0C-w1-lat"/>
+                        <outlet property="lblBubble" destination="W6c-WW-F3W" id="DdW-S7-EJc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7H8-HG-kbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDX-9p-gNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="-630"/>
+            <point key="canvasLocation" x="1765.217391304348" y="-630.16304347826087"/>
         </scene>
     </scenes>
     <resources>
+        <image name="9" width="240" height="240"/>
+        <image name="chatBubble" width="250" height="196"/>
         <image name="foto_edit" width="981" height="374"/>
         <image name="ing_logo" width="127" height="60"/>
         <image name="shake_logo" width="83" height="83"/>

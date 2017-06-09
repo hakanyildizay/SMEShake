@@ -64,14 +64,13 @@ class DetailViewController: UIViewController {
         self.imgEmoji.alpha = 0.5
         
         
-        UIView.animate(withDuration: 1.0, animations: { 
+        UIView.animate(withDuration: 0.7, animations: {
             self.imgEmoji.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             self.imgEmoji.alpha = 1.0
         }) { (isFinished : Bool) in
-            UIView.animate(withDuration: 0.5, animations: { 
+            UIView.animate(withDuration: 0.3, animations: {
                 self.imgEmoji.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             })
-            
         }
         
         /*

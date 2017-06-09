@@ -73,17 +73,6 @@ class DetailViewController: UIViewController {
             })
         }
         
-        /*
-        UIView.animate(withDuration: 1, animations: {
-            self.imgEmoji.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            self.imgEmoji.alpha = 1.0
-        }) { (finished) in
-//            UIView.animate(withDuration: 1, animations: {
-//                yourView.transform = CGAffineTransform.identity
-            print("")
-            })}
- */
-        
     }
     
     override func didReceiveMemoryWarning() {

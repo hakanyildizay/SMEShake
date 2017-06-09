@@ -59,6 +59,32 @@ class DetailViewController: UIViewController {
         let emojiName  = self.emojis[randomNumber] ?? "0"
         self.imgEmoji.image = UIImage(named: emojiName)
         self.lblBubble.text = speech
+        
+        self.imgEmoji.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        self.imgEmoji.alpha = 0.5
+        
+        
+        UIView.animate(withDuration: 1.0, animations: { 
+            self.imgEmoji.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            self.imgEmoji.alpha = 1.0
+        }) { (isFinished : Bool) in
+            UIView.animate(withDuration: 0.5, animations: { 
+                self.imgEmoji.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            })
+            
+        }
+        
+        /*
+        UIView.animate(withDuration: 1, animations: {
+            self.imgEmoji.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self.imgEmoji.alpha = 1.0
+        }) { (finished) in
+//            UIView.animate(withDuration: 1, animations: {
+//                yourView.transform = CGAffineTransform.identity
+            print("")
+            })}
+ */
+        
     }
     
     override func didReceiveMemoryWarning() {

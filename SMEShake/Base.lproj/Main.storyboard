@@ -83,7 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4wP-2D-ycv"/>
                     <connections>
-                        <segue destination="mM0-FX-q6e" kind="show" identifier="toDetail" id="LaS-TG-59V"/>
+                        <segue destination="mM0-FX-q6e" kind="show" identifier="toDetail" animates="NO" id="LaS-TG-59V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aH8-2c-1yQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

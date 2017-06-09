@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +21,58 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ing_logo" translatesAutoresizingMaskIntoConstraints="NO" id="m7O-hV-MA7">
+                                <rect key="frame" x="232" y="587" width="127" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Mju-UH-E1F"/>
+                                    <constraint firstAttribute="width" constant="127" id="aI8-Wg-LnZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="shake_logo" translatesAutoresizingMaskIntoConstraints="NO" id="XY1-7A-XzL">
+                                <rect key="frame" x="146" y="454" width="83" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="D4Q-oK-njG"/>
+                                    <constraint firstAttribute="height" constant="83" id="vqV-BI-av3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SME SHAKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fgt-7E-Te6">
+                                <rect key="frame" x="0.0" y="100" width="375" height="72.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="62"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="foto_edit" translatesAutoresizingMaskIntoConstraints="NO" id="e3c-fK-P7y">
+                                <rect key="frame" x="0.0" y="147" width="375" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="374" id="fQV-as-alf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.4549019608" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="e3c-fK-P7y" secondAttribute="trailing" id="3HY-Uw-H2n"/>
+                            <constraint firstItem="m7O-hV-MA7" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="651-U0-Eme"/>
+                            <constraint firstItem="e3c-fK-P7y" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HoW-S5-Rlv"/>
+                            <constraint firstItem="e3c-fK-P7y" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XTN-PN-JSk"/>
+                            <constraint firstItem="m7O-hV-MA7" firstAttribute="top" secondItem="XY1-7A-XzL" secondAttribute="bottom" constant="50" id="Yfx-6M-Pl7"/>
+                            <constraint firstItem="fgt-7E-Te6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="bow-R2-NsY"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="m7O-hV-MA7" secondAttribute="bottom" constant="20" id="cPv-J6-Y7Z"/>
+                            <constraint firstItem="XY1-7A-XzL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dEd-Cf-s35"/>
+                            <constraint firstItem="fgt-7E-Te6" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="80" id="mQZ-qA-rgc"/>
+                            <constraint firstItem="e3c-fK-P7y" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="nxf-WV-mLE"/>
+                            <constraint firstAttribute="trailing" secondItem="fgt-7E-Te6" secondAttribute="trailing" id="zFP-HO-Pn6"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="foto_edit" width="981" height="374"/>
+        <image name="ing_logo" width="127" height="60"/>
+        <image name="shake_logo" width="83" height="83"/>
+    </resources>
 </document>

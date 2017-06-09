@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		DFF5CA8A1EEAEA43004F559C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5CA891EEAEA43004F559C /* AppDelegate.swift */; };
 		DFF5CA8C1EEAEA43004F559C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5CA8B1EEAEA43004F559C /* MasterViewController.swift */; };
-		DFF5CA8E1EEAEA43004F559C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5CA8D1EEAEA43004F559C /* DetailViewController.swift */; };
 		DFF5CA911EEAEA43004F559C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF5CA8F1EEAEA43004F559C /* Main.storyboard */; };
 		DFF5CA931EEAEA43004F559C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF5CA921EEAEA43004F559C /* Assets.xcassets */; };
 		DFF5CA961EEAEA43004F559C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF5CA941EEAEA43004F559C /* LaunchScreen.storyboard */; };
+		DFF5CA9E1EEAF192004F559C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5CA9D1EEAF192004F559C /* DetailViewController.swift */; };
+		DFF5CAA01EEAF5A0004F559C /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = DFF5CA9F1EEAF5A0004F559C /* emoji.json */; };
+		DFF5CAA21EEAF5C7004F559C /* speech.json in Resources */ = {isa = PBXBuildFile; fileRef = DFF5CAA11EEAF5C7004F559C /* speech.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DFF5CA861EEAEA43004F559C /* SMEShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMEShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF5CA891EEAEA43004F559C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF5CA8B1EEAEA43004F559C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		DFF5CA8D1EEAEA43004F559C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DFF5CA901EEAEA43004F559C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFF5CA921EEAEA43004F559C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF5CA951EEAEA43004F559C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFF5CA971EEAEA43004F559C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFF5CA9D1EEAF192004F559C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DFF5CA9F1EEAF5A0004F559C /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
+		DFF5CAA11EEAF5C7004F559C /* speech.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = speech.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				DFF5CA891EEAEA43004F559C /* AppDelegate.swift */,
 				DFF5CA8B1EEAEA43004F559C /* MasterViewController.swift */,
-				DFF5CA8D1EEAEA43004F559C /* DetailViewController.swift */,
 				DFF5CA8F1EEAEA43004F559C /* Main.storyboard */,
 				DFF5CA921EEAEA43004F559C /* Assets.xcassets */,
 				DFF5CA941EEAEA43004F559C /* LaunchScreen.storyboard */,
 				DFF5CA971EEAEA43004F559C /* Info.plist */,
+				DFF5CA9D1EEAF192004F559C /* DetailViewController.swift */,
+				DFF5CA9F1EEAF5A0004F559C /* emoji.json */,
+				DFF5CAA11EEAF5C7004F559C /* speech.json */,
 			);
 			path = SMEShake;
 			sourceTree = "<group>";
@@ -127,7 +133,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF5CAA21EEAF5C7004F559C /* speech.json in Resources */,
 				DFF5CA961EEAEA43004F559C /* LaunchScreen.storyboard in Resources */,
+				DFF5CAA01EEAF5A0004F559C /* emoji.json in Resources */,
 				DFF5CA931EEAEA43004F559C /* Assets.xcassets in Resources */,
 				DFF5CA911EEAEA43004F559C /* Main.storyboard in Resources */,
 			);
@@ -140,7 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFF5CA8E1EEAEA43004F559C /* DetailViewController.swift in Sources */,
+				DFF5CA9E1EEAF192004F559C /* DetailViewController.swift in Sources */,
 				DFF5CA8C1EEAEA43004F559C /* MasterViewController.swift in Sources */,
 				DFF5CA8A1EEAEA43004F559C /* AppDelegate.swift in Sources */,
 			);
@@ -267,6 +275,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2GKG6WK3GH;
 				INFOPLIST_FILE = SMEShake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ingbanktr.SMEShake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -280,6 +289,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2GKG6WK3GH;
 				INFOPLIST_FILE = SMEShake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ingbanktr.SMEShake;
 				PRODUCT_NAME = "$(TARGET_NAME)";

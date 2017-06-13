@@ -163,7 +163,7 @@ class DetailViewController: UIViewController {
                 if let object = json as? [String: String] {
                     // json is a dictionary
                     return object
-                } else if let object = json as? [Any] {
+                } else if json is [Any] {
                     // json is an array
                     return nil
                 } else {

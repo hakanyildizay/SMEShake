@@ -135,7 +135,7 @@
 				TargetAttributes = {
 					DFF5CA851EEAEA43004F559C = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = TF6492WKNM;
+						DevelopmentTeam = 2GKG6WK3GH;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -360,7 +360,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TF6492WKNM;
+				DEVELOPMENT_TEAM = 2GKG6WK3GH;
 				INFOPLIST_FILE = SMEShake/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

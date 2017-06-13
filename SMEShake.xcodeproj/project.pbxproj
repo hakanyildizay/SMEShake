@@ -380,7 +380,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ingbanktr.SMEShake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dd5d8a2e-f668-4227-85b5-94a5aa3e3d25";
+				PROVISIONING_PROFILE = "94373f76-0a65-49b8-88cc-21e9e9cce6a6";
 				PROVISIONING_PROFILE_SPECIFIER = SMEShakeDistribution;
 				SWIFT_VERSION = 3.0;
 			};

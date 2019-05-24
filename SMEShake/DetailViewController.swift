@@ -99,7 +99,7 @@ class DetailViewController: UIViewController {
         
     }
 
-    func tapImage(_ recognizer: UITapGestureRecognizer){
+    @objc func tapImage(_ recognizer: UITapGestureRecognizer){
      
         if self.currentMode == 0{
             self.changeMode(to: 1 - self.currentMode)
@@ -112,7 +112,7 @@ class DetailViewController: UIViewController {
         self.changeMode(to: nextMode)
     }
     
-    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
         guard let motionEvent = event else { return }
         

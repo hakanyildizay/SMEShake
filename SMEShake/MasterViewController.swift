@@ -28,7 +28,7 @@ class MasterViewController: UIViewController {
         self.becomeFirstResponder()
     }
     
-    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
         guard let motionEvent = event else { return }
         

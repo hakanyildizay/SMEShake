@@ -244,17 +244,17 @@ extension UIView {
 }
 
 // Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromCATransitionSubtype(_ input: CATransitionSubtype) -> String {
+private func convertFromCATransitionSubtype(_ input: CATransitionSubtype) -> String {
 	return input.rawValue
 }
 
 // Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToOptionalCATransitionSubtype(_ input: String?) -> CATransitionSubtype? {
+private func convertToOptionalCATransitionSubtype(_ input: String?) -> CATransitionSubtype? {
 	guard let input = input else { return nil }
 	return CATransitionSubtype(rawValue: input)
 }
 
 // Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromCATransitionType(_ input: CATransitionType) -> String {
+private func convertFromCATransitionType(_ input: CATransitionType) -> String {
 	return input.rawValue
 }
